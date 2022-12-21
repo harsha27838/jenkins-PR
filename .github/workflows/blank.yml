@@ -2,7 +2,7 @@ name: Pull Request Action
 on:
   push:
     branches:
-      - dev
+      - dev/*
 
 jobs:
   create-pull-request:
@@ -15,7 +15,6 @@ jobs:
         with:
           destination_branch: "main"
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          pr_label: "automated pr"
-          pr_title:  Simple demo"
-      
+          pr_label: "feature, automated pr"
+          pr_title: "[Example] Simple demo"
 
